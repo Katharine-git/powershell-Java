@@ -45,5 +45,7 @@ function InstallJava($javaVersion, $jdkVersion, $url, $fileName, $jdkPath, $jreP
     # Set Java home
     [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Progra~1\Java\$jdk", "machine")
     $env:JAVA_HOME="C:\Progra~1\Java\$jdk"
-
+    
+    #End of transcript
     Stop-Transcript
+
