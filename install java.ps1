@@ -24,7 +24,7 @@ function InstallJava($javaVersion, $jdkVersion, $url, $fileName, $jdkPath, $jreP
     Write-Host "Installing JRE to $jrePath"
     
     #waiting time for complete installation
-    Start-Sleep -s 50
+    Start-Sleep -s 20
     
     Write-Verbose "$javaVersion installed" 
     }
@@ -43,7 +43,7 @@ function InstallJava($javaVersion, $jdkVersion, $url, $fileName, $jdkPath, $jreP
     InstallJava $javaVersion $jdkVersion "https://storage.googleapis.com/appveyor-download-cache/jdk/$fileName" $fileName "$env:ProgramFiles\Java\$jdk" "$env:ProgramFiles\Java\$jre"
     
     # Set Java home
-    [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Progra~1\Java\jdk1.8.0", "machine")
-    $env:JAVA_HOME="C:\Progra~1\Java\jdk1.8.0"
+    [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Progra~1\Java\$jdk", "machine")
+    $env:JAVA_HOME="C:\Progra~1\Java\$jdk"
 
     Stop-Transcript
