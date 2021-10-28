@@ -1,6 +1,6 @@
 #Installing Java jdk 8
 function InstallJava($javaVersion, $jdkVersion, $url, $fileName, $jdkPath, $jrePath) {
-    Write-Host "Installing $javaVersion..." -ForegroundColor Cyan
+    Write-Host "Installing $javaVersion..." 
     
      # download
     Write-Host "Downloading installer"
@@ -19,7 +19,7 @@ function InstallJava($javaVersion, $jdkVersion, $url, $fileName, $jdkPath, $jreP
     Start-Process cmd.exe -WindowStyle Hidden -ArgumentList $arguments
     
 
-    Write-Host "$javaVersion installed" -ForegroundColor Blue
+    Write-Host "$javaVersion installed" 
     }
     
     InstallJava "JDK 1.8 x64" 8 "https://storage.googleapis.com/appveyor-download-cache/jdk/jdk-8u221-windows-x64.exe" "jdk-8u221-windows-x64.exe" "$env:ProgramFiles\Java\jdk1.8.0" "$env:ProgramFiles\Java\jre8"
