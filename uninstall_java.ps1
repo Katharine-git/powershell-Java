@@ -15,7 +15,7 @@ function GetUninstallString($productName) {
             $uninstallCommand = $uninstallCommand.replace('MsiExec.exe /I{', '/x{').replace('MsiExec.exe /X{', '/x{')
             cmd /c start /wait msiexec.exe $uninstallCommand /quiet
     
-            Write-Host "Uninstalled $name" -ForegroundColor Green
+            Write-Host "Uninstalled $name" 
         }
     }
         UninstallJava 'Java SE Development Kit 8 Update 221'
